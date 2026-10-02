@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title> <!-- Переменная из context -->
+    
+    <!-- Динамически генерируем ссылку на CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/home/style.css') }}">
+</head>
+<body>
+    <h1>{{ message }}</h1> <!-- Переменная из context -->
+    <button onclick="showAlert()">Нажми меня</button>
+
+    <!-- Пример подключения JS файла, если бы он лежал в static/script.js -->
+    <!-- <script src="{{ url_for('static', path='script.js') }}"></script> -->
+    
+    <script>
+        function showAlert() {
+            alert("Статика и JS работают!");
+        }
+    </script>
+</body>
+</html>
