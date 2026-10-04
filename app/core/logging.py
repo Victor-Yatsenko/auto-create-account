@@ -1,11 +1,10 @@
-from app.core.config import Settings
 from loguru import logger
 
 
 logger.remove()
 logger.enable(__name__)
 logger.add(".LOGS/log_{time:DD}.{time:MM}.{time:YYYY}.log",
-           level=Settings.LOG_LEVEL,
+           level="INFO",
            encoding="utf-8",
            format="{time:DD.MM.YYYY at HH:mm:ss} | {level} | file {file}:{line} | {message}"
            )

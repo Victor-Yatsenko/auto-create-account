@@ -4,6 +4,7 @@
 README.md
 docker-compose.yml
 Makefile
+test_api.http
 
 
 .venv/
